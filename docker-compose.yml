@@ -1,0 +1,34 @@
+networks:
+  aip-app:
+    name: aip
+    driver: bridge
+
+services:
+  api:
+    build: ./api # Points to the dockerfile within ./api folder
+    ports:
+      - 80:80
+    volumes:
+      - ./models:/app/models
+    networks:
+      - aip-app
+    environment:
+      - HF_HOME=/app/models
+  
+  web:
+    build: ./web
+    ports:
+      - 7860:7860
+    networks:
+      - aip-app
+    environment:
+      - LLM_ENDPOINT=http://api:80/generate_stream
+
+  notebook-dev: # Notebook for development purposes
+    build: ./notebooks
+    ports:
+      - 8888:8888
+    volumes:
+      - ./notebooks:/notebooks
+    networks:
+      - aip-app
