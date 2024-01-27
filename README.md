@@ -17,11 +17,15 @@ To bring up the services, run `docker-compose up -d`.
 ### API:
 To view or play around with the API outputs, navigate to `Test API.ipynb`. Some outputs have been added here for convenience of viewing:
 
-<Add in Generate>
+#### `generate` Endpoint
+<img width="1294" alt="generate" src="https://github.com/halfeatenorange/aip-project/assets/39205771/d2b36613-811c-46d4-88f9-bb3789148c6f">
 
-<Add in Generate Stream>
+#### `generate_stream` Endpoint
+<img width="1290" alt="generate-stream" src="https://github.com/halfeatenorange/aip-project/assets/39205771/6e6edc0b-3f26-4c7c-b7ce-2311bd743736">
+
 
 ### Chatbot
 A gradio interface had been built for a more interactive experience with the LLM. To play with the chatbot, visit `localhost:7860` after bringing up the docker containers. A short video demo is provided:
 
-<Add in video demo>
+https://github.com/halfeatenorange/aip-project/assets/39205771/e90f15c9-fb5a-4c6f-8395-5ce7cb7bff2d
+
